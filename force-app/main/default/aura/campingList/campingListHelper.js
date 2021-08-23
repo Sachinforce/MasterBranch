@@ -1,5 +1,0 @@
-({
-	 createItem : function(component, camping) {
-        
-    },
-})
