@@ -1,5 +1,0 @@
-({
-	getAccountList : function() {
-		
-	}
-})

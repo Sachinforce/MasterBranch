@@ -1,7 +1,19 @@
 <project name="Sample usage of Salesforce Ant tasks" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
 <property file="build.properties"/>
 <property environment="env"/>
-<target name="deployall">
+<target name="DPSanbboxBuild">
+<sf:deploy username="${sf2.username}" password="${sf2.password}" serverurl="${sf2.serverurl}" testlevel="NoTestRun" logtype="Detail" deployRoot="force-app\main\default"/>
+</target>
+<target name="CSSanbboxBuild">
+<sf:deploy username="${sf1.username}" password="${sf1.password}" serverurl="${sf2.serverurl}" testlevel="NoTestRun" logtype="Detail" deployRoot="force-app\main\default"/>
+</target>
+<target name="UATSanbboxBuild">
+<sf:deploy username="${sf3.username}" password="${sf3.password}" serverurl="${sf2.serverurl}" testlevel="NoTestRun" logtype="Detail" deployRoot="force-app\main\default"/>
+</target>
+<target name="ProdBuild">
+<sf:deploy username="${sf4.username}" password="${sf4.password}" serverurl="${sf.serverurl}" testlevel="NoTestRun" logtype="Detail" deployRoot="force-app\main\default"/>
+</target>
+<target name="myDevbuild">
 <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" testlevel="NoTestRun" logtype="Detail" deployRoot="force-app\main\default"/>
 </target>
 </project>
